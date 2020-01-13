@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindowForm));
             this.btStart = new System.Windows.Forms.Button();
             this.btCalibrate = new System.Windows.Forms.Button();
             this.btRecord = new System.Windows.Forms.Button();
@@ -44,14 +45,17 @@
             this.btSettings = new System.Windows.Forms.Button();
             this.refineWorker = new System.ComponentModel.BackgroundWorker();
             this.lbSeqName = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btStart
             // 
-            this.btStart.Location = new System.Drawing.Point(12, 12);
+            this.btStart.Location = new System.Drawing.Point(16, 46);
+            this.btStart.Margin = new System.Windows.Forms.Padding(4);
             this.btStart.Name = "btStart";
-            this.btStart.Size = new System.Drawing.Size(95, 23);
+            this.btStart.Size = new System.Drawing.Size(127, 28);
             this.btStart.TabIndex = 0;
             this.btStart.Text = "Start server";
             this.btStart.UseVisualStyleBackColor = true;
@@ -59,9 +63,10 @@
             // 
             // btCalibrate
             // 
-            this.btCalibrate.Location = new System.Drawing.Point(12, 70);
+            this.btCalibrate.Location = new System.Drawing.Point(286, 186);
+            this.btCalibrate.Margin = new System.Windows.Forms.Padding(4);
             this.btCalibrate.Name = "btCalibrate";
-            this.btCalibrate.Size = new System.Drawing.Size(95, 23);
+            this.btCalibrate.Size = new System.Drawing.Size(74, 28);
             this.btCalibrate.TabIndex = 2;
             this.btCalibrate.Text = "Calibrate";
             this.btCalibrate.UseVisualStyleBackColor = true;
@@ -69,9 +74,10 @@
             // 
             // btRecord
             // 
-            this.btRecord.Location = new System.Drawing.Point(12, 126);
+            this.btRecord.Location = new System.Drawing.Point(315, 305);
+            this.btRecord.Margin = new System.Windows.Forms.Padding(4);
             this.btRecord.Name = "btRecord";
-            this.btRecord.Size = new System.Drawing.Size(95, 23);
+            this.btRecord.Size = new System.Drawing.Size(127, 28);
             this.btRecord.TabIndex = 4;
             this.btRecord.Text = "Start recording";
             this.btRecord.UseVisualStyleBackColor = true;
@@ -81,18 +87,22 @@
             // 
             this.lClientListBox.FormattingEnabled = true;
             this.lClientListBox.HorizontalScrollbar = true;
-            this.lClientListBox.Location = new System.Drawing.Point(113, 12);
+            this.lClientListBox.ItemHeight = 16;
+            this.lClientListBox.Location = new System.Drawing.Point(151, 46);
+            this.lClientListBox.Margin = new System.Windows.Forms.Padding(4);
             this.lClientListBox.Name = "lClientListBox";
-            this.lClientListBox.Size = new System.Drawing.Size(219, 108);
+            this.lClientListBox.Size = new System.Drawing.Size(291, 132);
             this.lClientListBox.TabIndex = 5;
             // 
             // statusStrip1
             // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.statusLabel});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 187);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 345);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(344, 22);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(459, 22);
             this.statusStrip1.TabIndex = 6;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -109,18 +119,20 @@
             // 
             // txtSeqName
             // 
-            this.txtSeqName.Location = new System.Drawing.Point(113, 155);
+            this.txtSeqName.Location = new System.Drawing.Point(16, 311);
+            this.txtSeqName.Margin = new System.Windows.Forms.Padding(4);
             this.txtSeqName.MaxLength = 40;
             this.txtSeqName.Name = "txtSeqName";
-            this.txtSeqName.Size = new System.Drawing.Size(106, 20);
+            this.txtSeqName.Size = new System.Drawing.Size(140, 22);
             this.txtSeqName.TabIndex = 7;
             this.txtSeqName.Text = "noname";
             // 
             // btRefineCalib
             // 
-            this.btRefineCalib.Location = new System.Drawing.Point(12, 97);
+            this.btRefineCalib.Location = new System.Drawing.Point(368, 186);
+            this.btRefineCalib.Margin = new System.Windows.Forms.Padding(4);
             this.btRefineCalib.Name = "btRefineCalib";
-            this.btRefineCalib.Size = new System.Drawing.Size(95, 23);
+            this.btRefineCalib.Size = new System.Drawing.Size(74, 28);
             this.btRefineCalib.TabIndex = 11;
             this.btRefineCalib.Text = "Refine calib";
             this.btRefineCalib.UseVisualStyleBackColor = true;
@@ -144,9 +156,10 @@
             // 
             // btShowLive
             // 
-            this.btShowLive.Location = new System.Drawing.Point(12, 154);
+            this.btShowLive.Location = new System.Drawing.Point(16, 113);
+            this.btShowLive.Margin = new System.Windows.Forms.Padding(4);
             this.btShowLive.Name = "btShowLive";
-            this.btShowLive.Size = new System.Drawing.Size(95, 23);
+            this.btShowLive.Size = new System.Drawing.Size(127, 65);
             this.btShowLive.TabIndex = 12;
             this.btShowLive.Text = "Show live";
             this.btShowLive.UseVisualStyleBackColor = true;
@@ -154,9 +167,10 @@
             // 
             // btSettings
             // 
-            this.btSettings.Location = new System.Drawing.Point(12, 41);
+            this.btSettings.Location = new System.Drawing.Point(151, 186);
+            this.btSettings.Margin = new System.Windows.Forms.Padding(4);
             this.btSettings.Name = "btSettings";
-            this.btSettings.Size = new System.Drawing.Size(95, 23);
+            this.btSettings.Size = new System.Drawing.Size(127, 28);
             this.btSettings.TabIndex = 13;
             this.btSettings.Text = "Settings";
             this.btSettings.UseVisualStyleBackColor = true;
@@ -170,17 +184,44 @@
             // lbSeqName
             // 
             this.lbSeqName.AutoSize = true;
-            this.lbSeqName.Location = new System.Drawing.Point(113, 136);
+            this.lbSeqName.Location = new System.Drawing.Point(13, 290);
+            this.lbSeqName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbSeqName.Name = "lbSeqName";
-            this.lbSeqName.Size = new System.Drawing.Size(88, 13);
+            this.lbSeqName.Size = new System.Drawing.Size(115, 17);
             this.lbSeqName.TabIndex = 14;
             this.lbSeqName.Text = "Sequence name:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(104, 256);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(270, 24);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "- VOLUMETRIC CAPTURE -";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(117, 9);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(257, 24);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "- 3D RECONSTRUCTION -";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
             // MainWindowForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(344, 209);
+            this.ClientSize = new System.Drawing.Size(459, 367);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lbSeqName);
             this.Controls.Add(this.btSettings);
             this.Controls.Add(this.btShowLive);
@@ -192,10 +233,13 @@
             this.Controls.Add(this.btCalibrate);
             this.Controls.Add(this.btStart);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "MainWindowForm";
             this.Text = "LiveScanServer";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.Load += new System.EventHandler(this.MainWindowForm_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -221,6 +265,8 @@
         private System.ComponentModel.BackgroundWorker refineWorker;
         private System.Windows.Forms.ToolStripStatusLabel statusLabel;
         private System.Windows.Forms.Label lbSeqName;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

@@ -498,5 +498,20 @@ namespace KinectServer
 
             lClientListBox.DataSource = listBoxItems;
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainWindowForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
